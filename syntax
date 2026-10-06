@@ -3,3 +3,9 @@ output —
 monitor — 
 keyb —
 ram —
+loop: ; —
+
+loop:
+input ram <– output keyb = input monitor;
+
+
