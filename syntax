@@ -1,25 +1,24 @@
 input — ввод 
 output — вывод 
-monitor — 
-keyb —
-ram —
-loop: ; —
-
+monitor — монитор 
+keyb — клавиатура 
+ram — оперативная память 
+loop: ; — цыкл 
+1.Вывод всё что печятаетьчя на клавиатуре вывод на экран:
 loop:
 input ram <– output keyb = input monitor(0,0);
 
-
+2.Запуск программ на железе:
 ram x
 loop:
-
 otput monitor = START x 
 —> output hdd x 
 —> input cpu
 ;
 
+3.Остоноыкк программ на железе:
 ram x
 loop:
-
 otput monitor = STOP x 
 —> output hdd x 
 —> otput cpu
