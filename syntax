@@ -6,6 +6,6 @@ ram —
 loop: ; —
 
 loop:
-input ram <– output keyb = input monitor;
+input ram <– output keyb = input monitor(0,0);
 
 
