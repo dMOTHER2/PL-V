@@ -10,11 +10,19 @@ input ram <– output keyb = input monitor(0,0);
 
 
 ram x
-
 loop:
 
 otput monitor = START x 
 —> output hdd x 
-—> cpu
+—> input cpu
 ;
+
+ram x
+loop:
+
+otput monitor = STOP x 
+—> output hdd x 
+—> otput cpu
+;
+
 
