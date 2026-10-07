@@ -1,5 +1,5 @@
-input —
-output —
+input — ввод 
+output — вывод 
 monitor — 
 keyb —
 ram —
@@ -8,4 +8,7 @@ loop: ; —
 loop:
 input ram <– output keyb = input monitor(0,0);
 
+
+loop:
+otput monitor = START —> input ;
 
