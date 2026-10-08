@@ -9,7 +9,7 @@ loop: ; — цыкл
 x64
 ram.p[1] x
 loop:
-output.int keyb -> x -> input.int monitor.off(0,0);
+output.i keyb -> x -> input.i monitor.off(0,0);
 
 2.Запуск программ на железе:
 x64
