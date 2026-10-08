@@ -6,27 +6,24 @@ ram — оперативная память
 hoarder - накопитель 
 loop: ; — цыкл 
 1.Вывод всё что печятаетьчя на клавиатуре вывод на экран:
-x64
+#64
 ram.p[1] x
 loop:
-output.i keyb -> x -> input.i monitor.with(0,0);
+output.i keyb 
+-> x 
+-> input.i monitor.with(0,0)
+:loop
 
-2.Запуск программ на железе:
-x64
+2.Запуск и остановка программ на железе:
+#64
 ram.p[32] x
 ram.d START 
+ram.d STOP 
 loop:
-otput monitor(0,0) = START x 
-—> output hoarder x 
-—> input cpu
-;
-
-3.Остоноыкк программ на железе:
-ram.char x
-loop:
-otput monitor = STOP x 
-—> output hoarder x 
-—> otput cpu
-;
-
+otput.i monitor(0,0) = START x 
+—> output.i hoarder x 
+—> input.i cpu
+otput.i monitor(0,0) = STOP x 
+—> output.i cpu
+:loop 
 
