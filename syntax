@@ -10,7 +10,7 @@ loop:
 input ram <– output keyb = input monitor(0,0);
 
 2.Запуск программ на железе:
-
+x64
 ram.p[32] x
 ram.d START 
 loop:
