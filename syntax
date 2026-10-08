@@ -7,9 +7,9 @@ hoarder - накопитель
 loop: ; — цыкл 
 1.Вывод всё что печятаетьчя на клавиатуре вывод на экран:
 x64
-loop:
 ram.p[1] x
-output keyb -> x -> input monitor(0,0);
+loop:
+output.int keyb -> x -> input.int monitor.off(0,0);
 
 2.Запуск программ на железе:
 x64
