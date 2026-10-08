@@ -3,24 +3,26 @@ output — вывод
 monitor — монитор 
 keyb — клавиатура 
 ram — оперативная память 
+hoarder - накопитель 
 loop: ; — цыкл 
 1.Вывод всё что печятаетьчя на клавиатуре вывод на экран:
 loop:
 input ram <– output keyb = input monitor(0,0);
 
 2.Запуск программ на железе:
-ram x
+
+ram.char x
 loop:
-otput monitor = START x 
-—> output hdd x 
+otput monitor(0,0) = START x 
+—> output hoarder x 
 —> input cpu
 ;
 
 3.Остоноыкк программ на железе:
-ram x
+ram.char x
 loop:
 otput monitor = STOP x 
-—> output hdd x 
+—> output hoarder x 
 —> otput cpu
 ;
 
