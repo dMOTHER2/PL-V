@@ -11,7 +11,8 @@ input ram <– output keyb = input monitor(0,0);
 
 2.Запуск программ на железе:
 
-ram.char x
+ram.p[32] x
+ram.d START 
 loop:
 otput monitor(0,0) = START x 
 —> output hoarder x 
