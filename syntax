@@ -27,3 +27,10 @@ otput.i monitor(0,0) = STOP x
 —> output.i cpu
 :loop 
 
+
+Загрузчик:
+<64>
+hoarder(0):
+ram.d Hello!
+output.i monitor (0,0) = Hello! 
+:hoarder 
