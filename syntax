@@ -30,7 +30,14 @@ otput.i monitor(0,0) = STOP x
 
 Загрузчик:
 <64>
+hoarder(1): 
+ram.d Hello! 
+loop:
+Hello! —> output.i monitor (0,0)
+:loop
+:hoarder 
+
+<64>
 hoarder(0):
-ram.d Hello!
-output.i monitor (0,0) = Hello! 
+hoarder(1) —> cpu 
 :hoarder 
