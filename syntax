@@ -38,10 +38,11 @@ Hello! —> output.i monitor (0,0)
 :hoarder 
 
 <64>
-hoarder(0)=512:
+ram.d 0xAA55
+hoarder(0)=512[]:
 hoarder(1) —> cpu 
 :hoarder 
-hoarder(0)[]:
-
+hoarder(0)[511—512]:
+0xAA55
 :hiarder
 
