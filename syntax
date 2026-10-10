@@ -40,5 +40,8 @@ Hello! —> output.i monitor (0,0)
 <64>
 hoarder(0)=512:
 hoarder(1) —> cpu 
-
 :hoarder 
+hoarder(0)[]:
+
+:hiarder
+
