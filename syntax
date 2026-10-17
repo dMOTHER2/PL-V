@@ -7,36 +7,43 @@ hoarder - накопитель
 loop: ; — цыкл 
 1.Вывод всё что печятаетьчя на клавиатуре вывод на экран:
 bits 64
-ram.p[1]:x;
+ramp[1]:x;
 loop:
-output.i keyb 
+outputi keyb 
 -> x 
--> input.i monitor.with(0,0);
+-> inputi monitor.with(0,0)
+:loop 
 
 2.Запуск и остановка программ на железе:
 bits 64
-ram.p[32]:x;
-ram.d:START; 
-ram.d:STOP;
+ramp[32] x
+ramd START 
+ramd STOP
 loop:
-otput.i monitor(0,0) = START x 
-—> output.i hoarder x 
-—> input.i cpu
-otput.i monitor(0,0) = STOP x 
-—> output.i cpu;
+otputi monitor(0,0) = START x 
+—> outputi hoarder x 
+—> inputi cpu
+otputi monitor(0,0) = STOP x 
+—> outputi cpu 
+:loop
 
 
 Загрузчик:
 bits 32
 hoarder(1): 
-ram.d:Hello!;
+ramd Hello!
 loop:
-Hello! —> output.i monitor (0,0);;
+Hello! —> output.i monitor (0,0)
+:loop 
+:hoarder 
 
 bits 16
 hoarder(0)=512.0
 hoarder(0)[0—8]:
-hoarder(1) —> cpu;
+hoarder(1) —> cpu
+:hoarder
 hoarder(0)[511—512]:
-0xAA55;
+0xAA55
+:hoarder 
+
 
