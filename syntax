@@ -7,43 +7,36 @@ hoarder - накопитель
 loop: ; — цыкл 
 1.Вывод всё что печятаетьчя на клавиатуре вывод на экран:
 <64>
-ram.p[1] x
+ram.p[1]:x;
 loop:
 output.i keyb 
 -> x 
--> input.i monitor.with(0,0)
-:loop
+-> input.i monitor.with(0,0);
 
 2.Запуск и остановка программ на железе:
 <64>
-ram.p[32] x
-ram.d START 
-ram.d STOP 
+ram.p[32]:x;
+ram.d:START; 
+ram.d:STOP;
 loop:
 otput.i monitor(0,0) = START x 
 —> output.i hoarder x 
 —> input.i cpu
 otput.i monitor(0,0) = STOP x 
-—> output.i cpu
-:loop 
+—> output.i cpu;
 
 
 Загрузчик:
-<64>
+<32>
 hoarder(1): 
-ram.d Hello! 
+ram.d:Hello!;
 loop:
-Hello! —> output.i monitor (0,0)
-:loop
-:hoarder 
+Hello! —> output.i monitor (0,0);;
 
-<64>
-ram.d 0xAA55
+<16>
 hoarder(0)=512.0
 hoarder(0)[0—8]:
-hoarder(1) —> cpu 
-:hoarder 
+hoarder(1) —> cpu;
 hoarder(0)[511—512]:
-0xAA55
-:hoarder
+0xAA55;
 
