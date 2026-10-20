@@ -7,11 +7,11 @@ hoarder - накопитель
 loop: ; — цыкл 
 1.Вывод всё что печятаетьчя на клавиатуре вывод на экран:
 bits 64
-ramp[1]:x;
+ramp[1] x
 loop:
 outputi keyb 
 -> x 
--> inputi monitor.with(0,0)
+-> inputi monitor.i(0,0)
 :loop 
 
 2.Запуск и остановка программ на железе:
